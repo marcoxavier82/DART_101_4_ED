@@ -22,6 +22,6 @@ void main(){
   const velocidadSonido = "250";
 
   final diaSemana = "Lunes";
-
+  //despues de definir las variables se debe usar
 
 }
