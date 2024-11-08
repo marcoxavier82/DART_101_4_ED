@@ -63,6 +63,7 @@ void main() {
   print(miPrimerMapa);
 
   // Como crear un mapa con valores de diferentes tipos 
+  
   // id -> int
   // nombre -> String
   // codigoBarras -> String
@@ -75,15 +76,32 @@ void main() {
   Map<String, dynamic> producto = {
     "id": 1,
     "nombre": "Celular",
-    "codigo_barras" : "1234567890",
+    "codigo_barras": "1234567890",
     "precio": 1099.99,
     "decripción": "Celular de alta gama",
     "imagen": "https://test.com/img",
-    "is_available": true, 
+    "is_available": true,
     "images": ["img1", "img2", "img3"],
     "colors": {
       "iphone6": "rojo",
       "iphone11": "azul",
     },
   };
+
+  Map<String, dynamic> producto2 = {};
+
+  /// Multiple productos
+
+  List<Map<String, dynamic>> productos = [
+    producto,
+    producto2,
+    producto,
+  ];
+
+  // imagenes
+  // url -> NetworkImage -> tiempo de carga
+  // base64 -> MemoryImage -> Se muestra más rápido
+  // File -> AssetImage, FileImage -> archivo en tu dispositivo
+  // Fechas
+  // DateTime -  "2024-12-10"
 }
