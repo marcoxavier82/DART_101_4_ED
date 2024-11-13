@@ -48,10 +48,20 @@ void main() {
   // adulto mayor --> mayor a 63 años
 
     print('Ingrese la edad:');
-    final valor = stdin.readLineSync() ?? "";
-    final edadNumerica = int.tryParse(valor);
+    final valor = stdin.readLineSync();
+    final edadNumerica = int.tryParse(valor  ?? '');
 
-    if (edadNumerica > 63){
-      print("Es mayor de edad");
-    }
+    if (edadNumerica == null){
+        print("Ingrese un valor numérico válido.");
+    } else if (edadNumerica > 63){
+        print("Es adulto mayor");
+    } else if (edadNumerica > 28 && edadNumerica <= 63){
+        print("Es adulto");
+    } else if (edadNumerica > 12 && edadNumerica <= 28){
+        print("Es adolescente");
+    } else if (edadNumerica > 1 && edadNumerica <= 12){
+        print("Es niño");
+    } else {
+        print("Es bebé");
+    }    
 }
