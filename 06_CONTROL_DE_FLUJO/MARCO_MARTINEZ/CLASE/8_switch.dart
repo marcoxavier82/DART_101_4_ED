@@ -5,21 +5,27 @@ void main() {
   print('Ingrese la edad:');
     final valor = stdin .readLineSync();
     final edadNumerica = int.tryParse(valor ?? '');
-/*
-    if (edadNumerica == null){
-        print("Ingrese un valor numérico válido.");
-    } else if (edadNumerica > 63){
-        print("Es adulto mayor");
-    } else if (edadNumerica > 28 && edadNumerica <= 63){
-        print("Es adulto");
-    } else if (edadNumerica > 12 && edadNumerica <= 28){
-        print("Es adolescente");
-    } else if (edadNumerica > 1 && edadNumerica <= 12){
-        print("Es niño");
-    } else {
-        print("Es bebé");
-    } 
-*/
+
+    /// Para comentar varias líneas de código en Visual Studio Code,
+    /// se puede utilizar la combinación de teclas Ctrl + K + C en Windows o Linux,
+    /// o Cmd + K + C en Mac. Para descomentarlas,
+    /// se debe presionar Ctrl + K + U en Windows o Linux,
+    /// o Cmd + K + U en Mac.
+
+    // if (edadNumerica == null){
+    //     print("Ingrese un valor numérico válido.");
+    // } else if (edadNumerica > 63){
+    //     print("Es adulto mayor");
+    // } else if (edadNumerica > 28 && edadNumerica <= 63){
+    //     print("Es adulto");
+    // } else if (edadNumerica > 12 && edadNumerica <= 28){
+    //     print("Es adolescente");
+    // } else if (edadNumerica > 1 && edadNumerica <= 12){
+    //     print("Es niño");
+    // } else {
+    //     print("Es bebé");
+    // } 
+
     /// switch-case
     /// 
     switch (edadNumerica) {
@@ -40,10 +46,10 @@ void main() {
       default: print("Es bebé");
     }
 
-    /// si eingreso el "Lunes" "Inicio de semana"
-    /// si ingreso "Martes" "Miercoles" "Jueves" "Viernes"
-    /// sin ingreso "Viernes" "inicio del fin de semana"
-    /// si ingreso "Sabado"
+  // si ingreso "lunes" "inicio de semana"
+  // si ingreso "martes" "miercoles" "jueves" "dias laborables"
+  // si ingreso "viernes" "inicio de fin de semana "
+  // si ingreso "sábado" "domingo" "fin de semana"
     
     print("Ingrese el día de la semana:");
     final dia = stdin .readLineSync();
@@ -51,17 +57,17 @@ void main() {
       case "Lunes":
         print("Inicio de semana");
         break;
-      case "Martes" || "Miércoles" || "Jueves":
-        print("Es dia $dia es mitad de semana");
+      case "Martes" || "Miercoles" || "Jueves":
+        print("El dia $dia es laborable");
         break;
       case "Viernes":
-        print("¡Inicio del fin de semana!");
+        print("Es $dia y el cuerpo lo sabe");
         break;
-      case "Sabado":
-        print("¡Es $dia!");
+      case "Sabado" || "Domingo":
+        print("Es fin de semana");
         break;
-    default:
-        print("Es el final de la semana o un día no válido");     
+      default:
+        print("Día no válido");     
     }
 
     /*
