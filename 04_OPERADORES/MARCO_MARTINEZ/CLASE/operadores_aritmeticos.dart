@@ -38,5 +38,47 @@ void main() {
 
   print(mensaje2.split(""));
   
+  print("------------");
+  print("RESTA");
+  //Resta
+  final variable3 = 11;
+  final variable4 = 117;
 
+  final resta = variable3 - variable4;
+  print(resta);
+
+  //MULTIPLICACION
+  print("-----------");
+  print("MULTIPLICACION");
+  final variable5 = 10;
+  final variable6 = 2.2;
+  final multiplicacion = variable5 * variable6;
+  print(multiplicacion);
+
+  //DIVISION
+  print("-----------");
+  print("DIVISION");
+  final variable7 = 7;
+  final variable8 = 2;
+  // El valor de retorno tipo double
+  final division = variable7 / variable8;
+  print(division);
+
+  // Tenemos la posibilidad de q el resultado solo se la parte entera
+  // ~ --> ASCII: alt + 126
+  final divisionEntera = variable7 ~/ variable8;
+  // 7/2 --> 3.5
+  // 7~/2 --> 3
+  print(divisionEntera);
+  
+  //Modulo %
+  //  7   /   2
+  // -6       3 -- Parte entera
+  //  1 --> Modulo
+  final divisionModulo = variable7 % variable8;
+  print(divisionModulo);
+
+  int variable9 = 1;
+  variable9 += 1;
+  print(variable9);
 }
