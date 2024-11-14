@@ -49,7 +49,7 @@ void main() {
 
     print('Ingrese la edad:');
     final valor = stdin.readLineSync();
-    final edadNumerica = int.tryParse(valor  ?? '');
+    final edadNumerica = int.tryParse(valor ?? '');
 
     if (edadNumerica == null){
         print("Ingrese un valor numérico válido.");
