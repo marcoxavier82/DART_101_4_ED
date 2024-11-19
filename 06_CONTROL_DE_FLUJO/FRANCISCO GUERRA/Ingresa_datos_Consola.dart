@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math';
 
 void main(){
   /*print ("Ingresa Dato:");
@@ -47,7 +48,7 @@ void main(){
     print ("Es bebe");
   }*/
 
-print ("Ingresa numero para la serie: ");
+/*print ("Ingresa numero para la serie: ");
 final valcon = stdin.readLineSync();
 final numero = double.tryParse(valcon ?? "");
 
@@ -58,6 +59,23 @@ if (numero != null){
   }
 } else{
   print ("El valor $numero no es numero");
-}
+}*/
 
+print ("Potencia de un numero ");
+final IngNum = stdin.readLineSync();
+final Numero = int.tryParse(IngNum ?? "") ?? 0;
+print ("Ingresa potencia: ");
+final IntPot = stdin.readLineSync();
+final Potencia = int.tryParse(IntPot ?? "") ?? 0;
+double Resultado = pow(Numero, Potencia).toDouble();
+print ("El resultado del numero: $Numero con la potencia: $Potencia es: $Resultado");
+
+if (Numero != 0 && Potencia != 0){
+    for (var i=1; i<=Potencia; i++){
+      double Resultado2 = pow(Numero, i).toDouble();
+      print ("$Numero ^ $i = $Resultado2");
+    }
+}else {
+  print ("El valor $Numero o el valor $Potencia no es valido");
+}
 }
