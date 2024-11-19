@@ -16,7 +16,7 @@ void main() {
   // Antes del null safety
   // nombre = null; // Esto nos da un error con el null safety, propio de DART
 
-  String? apellido = "Martínez";
+  String? apellido = "Mar-tín-ez";
   print(apellido);
 
   // Que pasa si yo quiero operar este valor
@@ -31,7 +31,7 @@ void main() {
   // Preguntar si es diferente de nulo
   // null aware ?.
   // Acceder al valor de la variable - variable es nula - retornar null - ejecuta el método
-  print(apellido?.split("")); // retorna: null
+  print(apellido?.split("-")); // retorna: null
 
   // La sentencia anterior es lo mismo q si se condicionara de esta manera
   // if(apellido != null) {
