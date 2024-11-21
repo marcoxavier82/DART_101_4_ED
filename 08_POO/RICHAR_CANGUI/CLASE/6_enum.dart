@@ -20,7 +20,7 @@ void main() {
     (element) {
       return element.dia == 1;
     },
-    orElse: () => DiaDeLaSemanaCompuesto.lunes,
+    //orElse: () => DiaDeLaSemanaCompuesto.lunes,
   );
   print(dia);
   print(DiaDeLaSemanaCompuesto.miercoles.dia == 2);
